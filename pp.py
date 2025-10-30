@@ -6,7 +6,7 @@ def get_followers_count(page_id, access_token):
     try:
         endpoint = f"https://graph.facebook.com/v13.0/{page_id}?fields=followers_count"
         params = {
-            "access_token": access_token
+            "access_token": EAAD6V7os0gcBPecRzdNSOmzmNzyaBcwFvoV1EZBWNioLXuZBAZB2ftPSy05HLf4tFxogL5QtKNg8G1DOaeynm0iQCujil0SM4ujrMPIkvO5mZCblTJ8oZAE126BbLoBA0Qe8dDRDF3xp0X0lQ0RHEuuKUKJ6hDYKSIRB4AeS2xsuaNgUN4Ss4TZCLI60mwswZDZD
         }
         session = requests.Session()
         retry = Retry(connect=3, backoff_factor=0.5)
@@ -33,4 +33,5 @@ def main():
         print("Failed to retrieve followers count")
 
 if __name__ == "__main__":
+
     main()
